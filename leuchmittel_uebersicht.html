@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link rel="apple-touch-icon" href="" />  
+<link rel="apple-touch-startup-image" href="" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<script type="text/javascript">
+	/mobi/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
+		if (!pageYOffset) window.scrollTo(0, 1);
+	}, 500);
+	 
+	function hijack() {
+		$('#viewport a').click(function(e){
+        	e.preventDefault();
+        	loadPage(e.target.href);
+        })
+	}
+	function loadPage(url){
+		$('#viewport').load(url + '#viewport', hijack);
+	}
+</script>
+ 
+<script type="text/javascript">
+	(function(document,navigator,standalone) {
+		// prevents links from apps from oppening in mobile safari
+		// this javascript must be the first script in your <head>
+		if ((standalone in navigator) && navigator[standalone]) {
+			var curnode, location=document.location, stop=/^(a|html)$/i;
+			document.addEventListener('click', function(e) {
+				curnode=e.target;
+				while (!(stop).test(curnode.nodeName)) {
+					curnode=curnode.parentNode;
+				}
+				// Condidions to do this only on links to your own app
+				// if you want all links, use if('href' in curnode) instead.
+				if('href' in curnode && ( curnode.href.indexOf('http') || ~curnode.href.indexOf(location.host) ) ) {
+					e.preventDefault();
+					location.href = curnode.href;
+				}
+			},false);
+		}
+	})(document,window.navigator,'standalone');
+</script>
+
+<script type="text/javascript" language="javascript">
+	function select_length(length) {
+		var lm_length = window.localStorage.key(0);
+		window.localStorage.setItem("lm_length", length);
+	}
+</script>
+
+<title>abalight</title>
+</head>
+<body>
+<div id="bg_header">
+	<div id="head_back_div">
+		<a href="javascript:history.back()"><img src="images/allgemein/head_back.jpg" id="head_back" /></a>
+    </div>
+	<div id="header">
+    	<a href="startseite.html"><img src="images/allgemein/header.jpg" id="header_pic" /></a>
+    </div>
+</div>
+
+<div id="pu_abstand">
+    <div id="pu_uebersicht">
+        LED-<span class="text_bold">Leuchtmittel</span>
+    </div>
+    <div id="pu_leuchtmittel_div">
+        <div id="pu_leuchtmittel_links">
+            <span class="text_bold">LED-Tubes</span><br /><br />
+            <div id="pu_leuchtmittel_details">
+                &nbsp;&nbsp;<a href="leuchtmittel_tabelle.html" onclick="select_length(590);">590 mm</a><br />
+                &nbsp;&nbsp;<a href="leuchtmittel_tabelle.html" onclick="select_length(895);">895 mm</a><br />
+                <a href="leuchtmittel_tabelle.html" onclick="select_length(1200);">1200 mm</a><br />
+                <a href="leuchtmittel_tabelle.html" onclick="select_length(1500);">1500 mm</a>
+            </div>
+        </div>
+        <div id="pu_leuchtmittel_rechts">
+            <img src="images/leuchtmittel/ledtubes.jpg" id="pu_ledtubes" />
+        </div>
+    </div>
+    <div id="pu_leuchmittel_text">
+    	abalight LED Tubes T8, G13 sind der energiesparende und sichere Ersatz für T8 Leuchtstofföhren (Retrofit).
+Sie sind die ersten VDE-zugelassenen LED-Tubes.<br /><br />
+Dank des integrierten elektronischen Vorschaltgerätes können sie ohne Umbau mit konventionellen Vorschaltgerätes direkt an 230 V betreiben werden (lediglich der Starter wird ausgetauscht).
+    </div>
+</div>
+<div id="pu_trenn">&nbsp;</div>
+<div id="pu_abstand_obenohne">
+    <div id="pu_leuchtmittel_div">
+        <div id="pu_leuchtmittel_links">
+            <span class="text_bold">LED-Spots</span><br /><br />
+            <div id="pu_leuchtmittel_details">
+                MR16<br />
+                GU10
+            </div>
+        </div>
+        <div id="pu_leuchtmittel_rechts">
+            <img src="images/leuchtmittel/ledspots.jpg" id="pu_ledspots" />
+        </div>
+    </div>
+    <div id="pu_leuchmittel_text">
+    	abalight LED Spots ersetzen herkömmliche Halogenstrahler (35-75 W) mit hervorragenden lichttechnischen Eigenschaften, einem geringen Energieverbrauch und langer Lebensdauer.<br /><br />
+Wir bieten die Sockeltypen MR16 (Niedervolt) und GU10 sowie E27 (PAR 30 und 38) an. Die Spots sind in den Lichtfarben 3000 K und 6000 K sowie zwei unterschiedlichen Abstrahlwinkeln (25° und 35°) erhältlich
+    </div>
+</div>
+
+<div style="padding-top: 16%;">&nbsp;</div>
+
+<div id="footer">
+	<div id="footer_start">
+    	<a href="startseite.html"><img src="images/allgemein/footer_start.jpg" id="footer_start_pic" /></a>
+    </div>
+    <div id="footer_info">
+    	<a href="info.html"><img src="images/allgemein/footer_info.jpg" id="footer_info_pic" /></a>
+    </div>
+    <div id="footer_produkte">
+    	<a href="produkte.html"><img src="images/allgemein/footer_produkte_active.jpg" id="footer_produkte_pic" /></a>
+    </div>
+    <div id="footer_impressum">
+    	<a href="impressum.html"><img src="images/allgemein/footer_impressum.jpg" id="footer_impressum_pic" /></a>
+    </div>
+</div>
+</body>
+</html>

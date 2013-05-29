@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link rel="apple-touch-icon" href="" />  
+<link rel="apple-touch-startup-image" href="" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<script type="text/javascript">
+	/mobi/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
+		if (!pageYOffset) window.scrollTo(0, 1);
+	}, 500);
+	 
+	function hijack() {
+		$('#viewport a').click(function(e){
+        	e.preventDefault();
+        	loadPage(e.target.href);
+        })
+	}
+	function loadPage(url){
+		$('#viewport').load(url + '#viewport', hijack);
+	}
+</script>
+ 
+<script type="text/javascript">
+	(function(document,navigator,standalone) {
+		// prevents links from apps from oppening in mobile safari
+		// this javascript must be the first script in your <head>
+		if ((standalone in navigator) && navigator[standalone]) {
+			var curnode, location=document.location, stop=/^(a|html)$/i;
+			document.addEventListener('click', function(e) {
+				curnode=e.target;
+				while (!(stop).test(curnode.nodeName)) {
+					curnode=curnode.parentNode;
+				}
+				// Condidions to do this only on links to your own app
+				// if you want all links, use if('href' in curnode) instead.
+				if('href' in curnode && ( curnode.href.indexOf('http') || ~curnode.href.indexOf(location.host) ) ) {
+					e.preventDefault();
+					location.href = curnode.href;
+				}
+			},false);
+		}
+	})(document,window.navigator,'standalone');
+</script>
+
+<script type="text/javascript" language="javascript">
+	function select_leuchte(data) {
+		window.localStorage.clear();
+		var l_panel = window.localStorage.key(0);
+		window.localStorage.setItem("l_panel", data);
+	}
+	function select_dl(dl) {
+		window.localStorage.clear();
+		var l_dl = window.localStorage.key(0);
+		window.localStorage.setItem("l_dl", dl);
+	}
+</script>
+<title>abalight</title>
+</head>
+<body>
+<div id="bg_header">
+	<div id="head_back_div">
+		<a href="javascript:history.back()"><img src="images/allgemein/head_back.jpg" id="head_back" /></a>
+    </div>
+	<div id="header">
+    	<a href="startseite.html"><img src="images/allgemein/header.jpg" id="header_pic" /></a>
+    </div>
+</div>
+
+<div id="lu_abstand">
+    <div id="lu_uebersicht">
+        LED-<span class="text_bold">Leuchten</span>
+    </div>
+    <div id="lu_ledpanel_div">
+    	<div id="lu_ledpanel_links">
+        	<span class="text_bold">LED-Panel</span><br /><br />
+            <div id="lu_ledpanel_details">
+            	<a href="leuchtmittel_tabelle.html" onclick="select_leuchte('FLAT');">Flat</a><br />
+                <a href="leuchtmittel_tabelle.html" onclick="select_leuchte('SNAP');">SNAP</a>
+            </div>
+        </div>
+        <div id="lu_ledpanel_mitte_div">
+        	<a href="leuchtmittel_tabelle.html" onclick="select_leuchte('FLAT');"><img src="images/leuchten/ledpanel_mitte.jpg" id="lu_ledpanel_mitte" /></a>
+        </div>
+        <div id="lu_ledpanel_rechts_div">
+        	<a href="leuchtmittel_tabelle.html" onclick="select_leuchte('SNAP');"><img src="images/leuchten/ledpanel_rechts.jpg" id="lu_lenpanel_rechts" /></a>
+        </div>
+    </div>
+    <div id="lu_ledpanel_text">
+    	abalight LED Tubes T8, G13 sind der energiesparende und sichere Ersatz für T8 Leuchtstoffröhren (Retrofit).
+Sie sind die ersten VDE-zugelassenen LED-Tubes.<br /><br />
+Dank des integrierten elektronischen Vorschaltgerätes können sie ohne Umbau mit konventionellen Vorschaltgerätes direkt an 230 V betrieben werden (lediglich der Starter wird ausgetauscht).
+    </div>
+</div>
+<div id="lu_trenn">&nbsp;</div>
+<div id="lu_abstand_obenohne">
+	<div class="lu_zwischenschrift">
+    	LED-Downlights
+    </div>
+    <div id="lu_downlights_div">
+    	<a href="leuchtmittel_tabelle.html" onclick="select_dl('DLSM');"><div class="lu_dl_1st">
+        	SMART
+            <div class="lu_dl_pic">
+            	<img src="images/leuchten/dl_smart.jpg" class="dl_pic" />
+            </div>
+        </div></a>
+        <a href="leuchtmittel_tabelle.html" onclick="select_dl('DLEX');"><div class="lu_dl_2nd">
+        	EXTRA
+            <div class="lu_dl_pic">
+            	<img src="images/leuchten/dl_extra.jpg" class="dl_pic" />
+            </div>
+        </div></a>
+        <a href="leuchtmittel_tabelle.html" onclick="select_dl('DLVA');"><div class="lu_dl_2nd">
+        	VARIO
+            <div class="lu_dl_pic">
+            	<img src="images/leuchten/dl_vario.jpg" class="dl_pic" />
+            </div>
+        </div></a>
+        <div style="clear: both; padding-top: 5%;"></div>
+        <a href="leuchtmittel_tabelle.html" onclick="select_dl('DLDE');"><div class="lu_dl_1st">
+        	DEEP
+            <div class="lu_dl_pic">
+            	<img src="images/leuchten/dl_deep.jpg" class="dl_pic" />
+            </div>
+        </div></a>
+        <a href="leuchtmittel_tabelle.html" onclick="select_dl('DLCU');"><div class="lu_dl_2nd">
+        	CUBE
+            <div class="lu_dl_pic">
+            	<img src="images/leuchten/dl_cube.jpg" class="dl_pic" />
+            </div>
+        </div></a>
+        <a href="leuchtmittel_tabelle.html" onclick="select_dl('DLRD');"><div class="lu_dl_2nd">
+        	READY
+            <div class="lu_dl_pic">
+            	<img src="images/leuchten/dl_mini.jpg" class="dl_pic" />
+            </div>
+        </div></a>
+        <div style="clear: both; padding-top: 5%;"></div>
+        <a href="leuchtmittel_tabelle.html" onclick="select_dl('DLDO');"><div class="lu_dl_1st">
+        	DOT
+            <div class="lu_dl_pic">
+            	<img src="images/leuchten/dl_mini.jpg" class="dl_pic" />
+            </div>
+        </div></a>
+        <a href="leuchtmittel_tabelle.html" onclick="select_dl('DLSL');"><div class="lu_dl_2nd">
+        	SLIDE
+            <div class="lu_dl_pic">
+            	<img src="images/leuchten/dl_mini.jpg" class="dl_pic" />
+            </div>
+        </div></a>
+    </div>
+</div>
+<div style="clear:both;"></div>
+<div id="lu_trenn">&nbsp;</div>
+<div id="lu_abstand_obenohne">
+	<div class="lu_zwischenschrift">
+    	LED-Endlostubes
+    </div>
+    <div style="padding-top: 4%;"></div>
+    <div id="lu_elt_text">
+    	LED-Endlostubes eignen sich ideal als Indirekt-Beleuchtung, als Back-Light in Werbeanlagen oder als &Uuml;berkopfpr&auml;sentationen f&uuml;r K&uuml;hlger&auml;te und vieles mehr. Bis zu 6 Meter k&ouml;nnen mit einer Elektronik verbunden werden.
+    </div>
+    <div id="lu_elt_bild">
+    	<a href="leuchtmittel_tabelle.html" onclick="select_dl('EL');"><img src="images/leuchten/endlostubes.jpg" id="elt_bild" /></a>
+    </div>
+</div>
+<div style="clear:both;"></div>
+<div id="lu_trenn">&nbsp;</div>
+<div id="lu_abstand_obenohne">
+	<div class="lu_zwischenschrift">
+    	LED-Fl&auml;chenstrahler
+    </div>
+    <div id="lu_ledpanel_div">
+    	<div id="lu_ledpanel_links">
+        	<div id="lu_ledpanel_details">
+            	<a href="leuchtmittel_tabelle.html" onclick="select_dl('A4');">A4</a><br />
+                <a href="leuchtmittel_tabelle.html" onclick="select_dl('R4');">R4</a>
+            </div>
+        </div>
+        <div id="lu_ledpanel_mitte_div">
+        	<a href="leuchtmittel_tabelle.html" onclick="select_dl('A4');"><img src="images/leuchten/fs_mitte.jpg" id="lu_fs_mitte" /></a>
+        </div>
+        <div id="lu_ledpanel_rechts_div">
+        	<a href="leuchtmittel_tabelle.html" onclick="select_dl('R4');"><img src="images/leuchten/fs_rechts.jpg" id="lu_fs_rechts" /></a>
+        </div>
+    </div>
+    <div id="lu_ledpanel_text">
+    	abalight A4 LED Fl&auml;chenstrahler sind der perfekte, energiesparende Ersatz für HQI. Es stehen 3 Bautypen (S1, S4 und S2H) in verschiedenen Varianten zur Verf&uuml;gung.<br /><br />
+		Der runde abalight R4 LED Fl&auml;chenstrahler ist der perfekte, energiesparende Ersatz für HQI Hallenstrahler. Auch hier stehen mehrere Varianten zur Verf&uuml;gung.
+    </div>
+</div>
+
+<div style="padding-top: 16%;">&nbsp;</div>
+
+<div id="footer">
+	<div id="footer_start">
+    	<a href="startseite.html"><img src="images/allgemein/footer_start.jpg" id="footer_start_pic" /></a>
+    </div>
+    <div id="footer_info">
+    	<a href="info.html"><img src="images/allgemein/footer_info.jpg" id="footer_info_pic" /></a>
+    </div>
+    <div id="footer_produkte">
+    	<a href="produkte.html"><img src="images/allgemein/footer_produkte_active.jpg" id="footer_produkte_pic" /></a>
+    </div>
+    <div id="footer_impressum">
+    	<a href="impressum.html"><img src="images/allgemein/footer_impressum.jpg" id="footer_impressum_pic" /></a>
+    </div>
+</div>
+</body>
+</html>

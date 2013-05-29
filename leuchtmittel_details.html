@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link rel="apple-touch-icon" href="" />  
+<link rel="apple-touch-startup-image" href="" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<script type="text/javascript">
+	/mobi/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
+		if (!pageYOffset) window.scrollTo(0, 1);
+	}, 500);
+	 
+	function hijack() {
+		$('#viewport a').click(function(e){
+        	e.preventDefault();
+        	loadPage(e.target.href);
+        })
+	}
+	function loadPage(url){
+		$('#viewport').load(url + '#viewport', hijack);
+	}
+</script>
+ 
+<script type="text/javascript">
+	(function(document,navigator,standalone) {
+		// prevents links from apps from oppening in mobile safari
+		// this javascript must be the first script in your <head>
+		if ((standalone in navigator) && navigator[standalone]) {
+			var curnode, location=document.location, stop=/^(a|html)$/i;
+			document.addEventListener('click', function(e) {
+				curnode=e.target;
+				while (!(stop).test(curnode.nodeName)) {
+					curnode=curnode.parentNode;
+				}
+				// Condidions to do this only on links to your own app
+				// if you want all links, use if('href' in curnode) instead.
+				if('href' in curnode && ( curnode.href.indexOf('http') || ~curnode.href.indexOf(location.host) ) ) {
+					e.preventDefault();
+					location.href = curnode.href;
+				}
+			},false);
+		}
+	})(document,window.navigator,'standalone');
+</script>
+
+<script type="text/javascript" language="javascript">
+	function ReadFile(fileUrl) {
+		var req;
+		var fileContent;
+		var produkte;
+		var produkte_array;
+		
+		var produktname;
+		var p_nr, p_abmessung, p_lichtfarbe, p_leistung, p_lichtstrom, p_anzleds, p_optik, p_gehause, p_schutzart;
+		
+		var i, ins;
+		
+		if (window.ActiveXObject) {
+			req = new ActiveXObject("Microsoft.XMLHTTP");
+			req.open("GET", fileUrl, false);
+			req.onreadystatechange=function() {
+				if (req.readyState == 4) {
+					fileContent = req.responseText;
+				}
+			}
+			req.send(null);
+		} else if (window.XMLHttpRequest) {
+			req = new XMLHttpRequest();
+			req.open("GET", fileUrl, false);
+			req.send(null);
+			fileContent = req.responseText;
+		}
+		return fileContent;
+	}
+	
+	var y = parseInt(window.localStorage.getItem("dienummer"));
+	produkte = ReadFile("produkte.csv");	
+	produkte_array = produkte.split("\t");
+	
+	if (y == 0) {
+		produktname = produkte_array[28];
+		p_nr = produkte_array[27];
+		p_abmessung = produkte_array[34];
+		p_lichtfarbe = produkte_array[36];
+		p_leistung = produkte_array[37];
+		p_lichtstrom = produkte_array[38];
+		p_anzleds = produkte_array[40];
+		p_optik = produkte_array[43];
+		p_gehause = produkte_array[44];
+		p_schutzart = produkte_array[49];
+	} else {
+		produktname = produkte_array[y + 28];
+		p_nr = produkte_array[y + 27];
+		p_abmessung = produkte_array[y + 34];
+		p_lichtfarbe = produkte_array[y + 36];
+		p_leistung = produkte_array[y + 37];
+		p_lichtstrom = produkte_array[y + 38];
+		p_anzleds = produkte_array[y + 40];
+		p_optik = produkte_array[y + 43];
+		p_gehause = produkte_array[y + 44];
+		p_schutzart = produkte_array[y + 49];
+	}
+</script>
+
+<title>abalight</title>
+</head>
+<body>
+<div id="bg_header">
+	<div id="head_back_div">
+		<a href="javascript:history.back()"><img src="images/allgemein/head_back.jpg" id="head_back" /></a>
+    </div>
+	<div id="header">
+    	<a href="startseite.html"><img src="images/allgemein/header.jpg" id="header_pic" /></a>
+    </div>
+</div>
+
+<div id="pu_abstand">
+    <div id="pu_uebersicht">
+        LED-<span class="text_bold">Leuchtmittel</span>
+    </div>
+</div>
+<div style="padding-top: 2%;"></div>
+
+<div id="ld_trenn">&nbsp;</div>
+<div id="ld_abstand_obenohne">
+	<script type="text/javascript" language="javascript">document.write(produktname);</script>
+</div>
+<div id="ld_trenn">&nbsp;</div>
+
+<div id="ld_abstand_obenohne">
+	<div class="ld_details_name">Art-Nr.:</div>
+    <div class="ld_details_wert"><script type="text/javascript" language="javascript">document.write(p_nr);</script></div><br />
+    
+    <div class="ld_details_name">Abmessungen:</div>
+    <div class="ld_details_wert"><script type="text/javascript" language="javascript">document.write(p_abmessung);</script></div><br />
+    
+    <div class="ld_details_name">Lichtfarbe:</div>
+    <div class="ld_details_wert"><script type="text/javascript" language="javascript">document.write(p_lichtfarbe);</script></div><br />
+    
+    <div class="ld_details_name">Leistung:</div>
+    <div class="ld_details_wert"><script type="text/javascript" language="javascript">document.write(p_leistung);</script></div><br />
+    
+    <div class="ld_details_name">Lichtstrom:</div>
+    <div class="ld_details_wert"><script type="text/javascript" language="javascript">document.write(p_lichtstrom);</script></div><br />
+    
+    <div class="ld_details_name">Anz. LEDs:</div>
+    <div class="ld_details_wert"><script type="text/javascript" language="javascript">document.write(p_anzleds);</script></div><br />
+    
+    <div class="ld_details_name">Optik:</div>
+    <div class="ld_details_wert"><script type="text/javascript" language="javascript">document.write(p_optik);</script></div><br />
+    
+    <div class="ld_details_name">Geh&auml;use:</div>
+    <div class="ld_details_wert"><script type="text/javascript" language="javascript">document.write(p_gehause);</script></div><br />
+    
+    <div class="ld_details_name">Schutzart:</div>
+    <div class="ld_details_wert"><script type="text/javascript" language="javascript">document.write(p_schutzart);</script></div><br />
+</div>
+
+<div style="padding-top: 16%;">&nbsp;</div>
+<div id="footer">
+	<div id="footer_start">
+    	<a href="startseite.html"><img src="images/allgemein/footer_start.jpg" id="footer_start_pic" /></a>
+    </div>
+    <div id="footer_info">
+    	<a href="info.html"><img src="images/allgemein/footer_info.jpg" id="footer_info_pic" /></a>
+    </div>
+    <div id="footer_produkte">
+    	<a href="produkte.html"><img src="images/allgemein/footer_produkte_active.jpg" id="footer_produkte_pic" /></a>
+    </div>
+    <div id="footer_impressum">
+    	<a href="impressum.html"><img src="images/allgemein/footer_impressum.jpg" id="footer_impressum_pic" /></a>
+    </div>
+</div>
+</body>
+</html>

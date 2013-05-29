@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link rel="apple-touch-icon" href="" />  
+<link rel="apple-touch-startup-image" href="" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<script type="text/javascript">
+	/mobi/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
+		if (!pageYOffset) window.scrollTo(0, 1);
+	}, 500);
+	 
+	function hijack() {
+		$('#viewport a').click(function(e){
+        	e.preventDefault();
+        	loadPage(e.target.href);
+        })
+	}
+	function loadPage(url){
+		$('#viewport').load(url + '#viewport', hijack);
+	}
+</script>
+ 
+<script type="text/javascript">
+	(function(document,navigator,standalone) {
+		// prevents links from apps from oppening in mobile safari
+		// this javascript must be the first script in your <head>
+		if ((standalone in navigator) && navigator[standalone]) {
+			var curnode, location=document.location, stop=/^(a|html)$/i;
+			document.addEventListener('click', function(e) {
+				curnode=e.target;
+				while (!(stop).test(curnode.nodeName)) {
+					curnode=curnode.parentNode;
+				}
+				// Condidions to do this only on links to your own app
+				// if you want all links, use if('href' in curnode) instead.
+				if('href' in curnode && ( curnode.href.indexOf('http') || ~curnode.href.indexOf(location.host) ) ) {
+					e.preventDefault();
+					location.href = curnode.href;
+				}
+			},false);
+		}
+	})(document,window.navigator,'standalone');
+</script>
+<title>abalight</title>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">setTimeout("location.href='startseite.html'", 3000);</script>
+<div id="stpic_div">
+	<img src="images/allgemein/startbild.jpg" id="stpic_pic" />
+</div>
+</body>
+</html>

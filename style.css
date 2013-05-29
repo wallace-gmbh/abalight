@@ -1,0 +1,468 @@
+@charset "utf-8";
+@font-face{
+   font-family: arial;
+   local: arial;
+   src: url(arial.ttf);	
+}
+@font-face{
+   font-family: arialbd;
+   local: arialbd;
+   src: url(arialbd.ttf);	
+}
+@font-face{
+   font-family: lsans;
+   local: lsans;
+   src: url(lsans.ttf);	
+}
+a img { border:none;}
+body {
+	top:0;
+	left:0;
+	right:0;
+	margin:0;
+	padding:0;
+	font-family: Arial;
+	color: #fff;
+	background-color: #000;
+	font-size: 12px;
+}
+a:link{text-decoration: none; color: #fff;}
+a:visited{text-decoration: none; color: #fff;}
+a:active{text-decoration: none; color: #fff;}
+/************************* header *************************/
+#bg_header{
+	width: 100%;
+	min-height: 8.59%;
+	max-height: 110px;
+	background: url(images/allgemein/bg_header.jpg) repeat-x;
+	background-size: 100% 100%;
+	position: fixed;
+	top: 0px;
+}
+#head_back_div{
+	width: 5.69%;
+	height: 2.83%;
+	max-width: 41px;
+	max-height: 36px;
+	float: left;
+	margin: 5% 0 0 5.27%;
+}
+#head_back{
+	width: 100%;
+}
+#header{
+	width: 27.36%;
+	min-height: 8.59%;
+	max-width: 197px;
+	max-height: 110px;
+	margin: auto auto;
+}
+#header_pic{
+	width: 100%;
+}
+/************************* index *************************/
+#i_einleitung{
+	max-width: 97.4%;
+	height: 9.3%;
+	font-family: lsans;
+	margin-left: 2.6%;
+	padding-top: 16%;
+}
+#i_einleitung_text{
+	padding-top: 2.81%;
+}
+#i_slide_div{
+	width: 94.86%;
+	max-height: 9.85%;
+	max-width: 683px;
+	margin: auto;
+	padding-top: 4%;
+}
+#i_slide_pic{
+	width: 100%;
+}
+#i_willkommen{
+	padding-top: 4.53%;
+	font-family: arialbd;
+	margin-left: 2.6%;
+	max-width: 97.4%;
+}
+#i_willkommen_text{
+	padding-top: 4.53%;
+	margin-left: 2.6%;
+	max-width: 97.4%;
+}
+/************************* info *************************/
+.ueberschrift_text{
+	padding-top: 19.53%;
+	font-family: arialbd;
+	margin-left: 2.6%;
+	max-width: 97.4%;
+}
+.normal_text{
+	padding-top: 4.53%;
+	margin-left: 2.6%;
+	max-width: 97.4%;
+}
+#info_slide_div{
+	width: 94.86%;
+	max-height: 9.85%;
+	max-width: 683px;
+	margin: auto;
+	padding-top: 4%;
+}
+#info_slide_pic{
+	width: 100%;
+}
+/************************* produkte *************************/
+#p_background_leuchtmittel{
+	margin-top: 10%;
+	max-width: 100%;
+	min-height: 81.02%;
+	background: url(images/produkte/led_leuchtmittel.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+#p_background_leuchten{
+	margin-top: 10%;
+	max-width: 100%;
+	min-height: 81.02%;
+	background: url(images/produkte/led_leuchten.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+#p_background_zubehoer{
+	margin-top: 10%;
+	max-width: 100%;
+	min-height: 81.02%;
+	background: url(images/produkte/led_zubehoer.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+#p_auswahl_leuchtmittel{
+	padding-top: 90%;
+}
+.p_auswahl_pfeil_links{
+	float: left;
+	width: 17.63%;
+}
+.p_auswahl_text{
+	float: left;
+	width: 64.74%;
+}
+.p_auswahl_pfeil_rechts{
+	float: left;
+	width: 17.63%;
+}
+.p_auswahl_pfeil_links_pic{
+	width: 100%;
+}
+.p_auswahl_text_pic{
+	width: 100%;
+}
+.p_auswahl_pfeil_rechts_pic{
+	width: 100%;
+}
+/************************* impressum *************************/
+#imp_logo{
+	padding-top: 20.53%;
+	margin-left: 2.6%;
+	width: 27.36%;
+	height: 3.46%;
+	max-width: 197px;
+	max-height: 44px;
+}
+#imp_abalight{
+	margin-left: 2.6%;
+	max-width: 97.4%;
+	padding-top: 3.5%;
+}
+#imp_trenn{
+	width: 100%;
+	max-height: 1.35px;
+	margin-top: 4.5%;
+	background: #fff;
+	overflow: hidden;
+}
+#imp_ueberschrift{
+	margin: 4.5% 0 0 2.6%;
+	max-width: 97.4%;
+	font-size: 24px;
+	font-weight: bold;
+}
+#imp_wallace{
+	margin: 3.5% 0 0 2.6%;
+	max-width: 97.4%;
+}
+#imp_links{
+	float: left;
+	max-width: 60%;
+}
+#imp_rechts{
+	float: right;
+	width: 30.69%;
+	height: 10.87%;
+	max-width: 221px;
+	max-height: 138px;
+	margin-right: 9.17%;
+}
+#imp_wallace_logo{
+	width: 100%;
+	margin-top: 5%;
+}
+/************************* startbild *************************/
+#stpic_div{
+	margin: auto auto;
+	margin-top: 28.59%;
+	width: 62.92%;
+	max-height: 42.83%;
+}
+#stpic_pic{
+	width: 100%;
+}
+/************************* leuchtmittel_uebersicht *************************/
+#pu_abstand{
+	padding-top: 19%;
+	margin-left: 2.6%;
+	width: 94.8%;
+}
+#pu_abstand_obenohne{
+	margin-left: 2.6%;
+	width: 94.8%;
+}
+#pu_uebersicht{
+	font-size: 18px;
+}
+.text_bold{
+	font-weight: bold;
+}
+#pu_leuchtmittel_div{
+	padding-top: 5%;
+}
+#pu_leuchtmittel_links{
+	font-size: 12px;
+	width: 50%;
+	float: left;
+}
+#pu_leuchtmittel_details{
+	margin-left: 7%;
+}
+#pu_leuchtmittel_rechts{
+	width: 46%;
+	float: right;
+}
+#pu_ledtubes{
+	width: 100%;
+}
+#pu_leuchmittel_text{
+	clear: both;
+	width: 100%;
+	padding-top: 7%;
+	text-align: justify;
+}
+#pu_trenn{
+	width: 100%;
+	max-height: 1.35px;
+	margin-top: 5%;
+	background: #fff;
+	overflow: hidden;
+}
+#pu_ledspots{
+	width: 100%;
+}
+/************************* leuchten_uebersicht *************************/
+#lu_abstand{
+	padding-top: 19%;
+	margin-left: 2.6%;
+	width: 94.8%;
+}
+#lu_abstand_obenohne{
+	margin-left: 2.6%;
+	width: 94.8%;
+}
+#lu_uebersicht{
+	font-size: 18px;
+}
+#lu_ledpanel_text{
+	clear: both;
+	width: 100%;
+	padding-top: 7%;
+	text-align: justify;
+}
+#lu_trenn{
+	width: 100%;
+	max-height: 1.35px;
+	margin-top: 5%;
+	background: #fff;
+	overflow: hidden;
+}
+#lu_ledpanel_div{
+	padding-top: 5%;
+}
+#lu_ledpanel_details{
+	margin-left: 15%;
+}
+#lu_ledpanel_links{
+	width: 28.68%;
+	float: left;
+}
+#lu_ledpanel_mitte_div{
+	width: 30.03%;
+	float: left;
+}
+#lu_ledpanel_mitte{
+	width: 100%;
+}
+#lu_ledpanel_rechts_div{
+	width: 30.20%;
+	float: right;
+}
+#lu_lenpanel_rechts{
+	width: 100%;
+}
+#lu_downlights_div{
+	width: 84.9%;
+	margin: 4% auto 0 auto;
+}
+.lu_zwischenschrift{
+	margin-top: 5%;
+	font-size: 12px;
+	font-weight: bold;
+}
+.lu_dl_1st{
+	width: 28.62%;
+	float: left;
+}
+.lu_dl_2nd{
+	width: 28.62%;
+	float: left;
+	margin-left: 7.06%;
+}
+.dl_pic{
+	width: 100%;
+}
+#lu_elt_text{
+	width: 47.5%;
+	float: left;
+	text-align: justify;
+}
+#lu_elt_bild{
+	width: 45%;
+	float: right;
+	margin: auto 0 auto 0;
+}
+#elt_bild{
+	width: 100%;
+}
+#lu_fs_mitte{
+	width: 100%;
+}
+#lu_fs_rechts{
+	width: 100%;
+}
+/************************* zubehoer_uebersicht *************************/
+#zu_uebersicht{
+	font-size: 18px;
+}
+#zu_installationsysteme_div{
+	margin-top: 3%;
+}
+#zu_installationssysteme{
+	width: 100%;
+}
+#zu_treiber_text_links{
+	width: 50%;
+	float: left;
+}
+#zu_treiber_rechts{
+	width: 48%;
+	float: right;
+	margin-top: 4.5%;
+}
+#zu_treiber_pic{
+	width: 100%;
+}
+/************************* leuchtmittel_tabelle *************************/
+#lt_abstand{
+	padding-top: 19%;
+	margin-left: 2.6%;
+	width: 94.8%;
+}
+/************************* leuchtmittel_details *************************/
+#ld_trenn{
+	width: 100%;
+	max-height: 1.35px;
+	margin-top: 2%;
+	background: #fff;
+	overflow: hidden;
+}
+#ld_abstand_obenohne{
+	margin: 2% 0 0 2.6%;
+	width: 94.8%;
+}
+.ld_details_name{
+	width: 40%;
+	float: left;
+}
+.ld_details_wert{
+	float: left;
+}
+/************************* footer *************************/
+#footer{
+	width: 100%;
+	height: 10.31%;
+	max-height: 131px;
+	position: fixed;
+	bottom: 0px;
+}
+#footer_start{
+	float: left;
+	width: 25.28%;
+	height: 100%;
+}
+#footer_info{
+	float: left;
+	width: 25.13%;
+	height: 100%;
+}
+#footer_produkte{
+	float: left;
+	width: 25.28%;
+	height: 100%;
+}
+#footer_impressum{
+	float: left;
+	width: 24.3%;
+	height: 100%;
+}
+#footer_start_pic{
+	width: 100%;
+	height: 100%;
+}
+#footer_info_pic{
+	width: 100%;
+	height: 100%;
+}
+#footer_produkte_pic{
+	width: 100%;
+	height: 100%;
+}
+#footer_impressum_pic{
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
