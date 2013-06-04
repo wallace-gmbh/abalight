@@ -59,7 +59,6 @@ a:active{text-decoration: none; color: #fff;}
 }
 #header_pic{
 	width: 100%;
-	height: auto;
 }
 /************************* index *************************/
 #i_einleitung{
@@ -117,21 +116,21 @@ a:active{text-decoration: none; color: #fff;}
 }
 /************************* produkte *************************/
 #p_background_leuchtmittel{
-	margin-top: 15%;
+	margin-top: 12%;
 	max-width: 100%;
 	min-height: 100%;
 	background: url(images/produkte/led_leuchtmittel.jpg) no-repeat;
 	background-size: 100% 100%;
 }
 #p_background_leuchten{
-	margin-top: 15%;
+	margin-top: 12%;
 	max-width: 100%;
 	min-height: 100%;
 	background: url(images/produkte/led_leuchten.jpg) no-repeat;
 	background-size: 100% 100%;
 }
 #p_background_zubehoer{
-	margin-top: 15%;
+	margin-top: 12%;
 	max-width: 100%;
 	min-height: 100%;
 	background: url(images/produkte/led_zubehoer.jpg) no-repeat;
