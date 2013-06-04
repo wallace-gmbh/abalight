@@ -82,7 +82,10 @@
 	
 	if (y == 0) {
 		produktname = produkte_array[28];
+		
 		p_nr = produkte_array[27];
+		p_nr = p_nr.substring(p_nr.length-5, p_nr.length);
+		
 		p_abmessung = produkte_array[34];
 		p_lichtfarbe = produkte_array[36];
 		p_leistung = produkte_array[37];
@@ -94,6 +97,7 @@
 	} else {
 		produktname = produkte_array[y + 28];
 		p_nr = produkte_array[y + 27];
+		p_nr = p_nr.substring(p_nr.length-5, p_nr.length);
 		p_abmessung = produkte_array[y + 34];
 		p_lichtfarbe = produkte_array[y + 36];
 		p_leistung = produkte_array[y + 37];
