@@ -26,6 +26,18 @@ body {
 	background-color: #000;
 	font-size: 12px;
 }
+#2nd_body{
+	top:0;
+	left:0;
+	right:0;
+	margin:0;
+	padding:0;
+	font-family: Arial;
+	color: #fff;
+	background-color: #000;
+	font-size: 12px;
+	overflow: hidden;
+}
 a:link{text-decoration: none; color: #fff;}
 a:visited{text-decoration: none; color: #fff;}
 a:active{text-decoration: none; color: #fff;}
@@ -53,7 +65,6 @@ a:active{text-decoration: none; color: #fff;}
 #header{
 	width: 27.36%;
 	max-width: 197px;
-	max-height: 44px;
 	margin: auto auto;
 	margin-top: 3.75%;
 }
@@ -121,6 +132,7 @@ a:active{text-decoration: none; color: #fff;}
 	min-height: 100%;
 	background: url(images/produkte/led_leuchtmittel.jpg) no-repeat;
 	background-size: 100% 100%;
+	padding-bottom: 16%;
 }
 #p_background_leuchten{
 	margin-top: 12%;
@@ -128,6 +140,7 @@ a:active{text-decoration: none; color: #fff;}
 	min-height: 100%;
 	background: url(images/produkte/led_leuchten.jpg) no-repeat;
 	background-size: 100% 100%;
+	padding-bottom: 16%
 }
 #p_background_zubehoer{
 	margin-top: 12%;
@@ -135,6 +148,7 @@ a:active{text-decoration: none; color: #fff;}
 	min-height: 100%;
 	background: url(images/produkte/led_zubehoer.jpg) no-repeat;
 	background-size: 100% 100%;
+	padding-bottom: 16%
 }
 #p_auswahl_leuchtmittel{
 	padding-top: 90%;
